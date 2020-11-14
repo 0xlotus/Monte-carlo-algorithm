@@ -47,4 +47,8 @@ fjs.parentNode.insertBefore(js, fjs);
   ga('create', 'UA-76540858-1', 'auto');
   ga('send', 'pageview');
 
-  if( document.querySelector('#index-list')
+  if( document.querySelector('#index-list') ){
+      var xhr=new XMLHttpRequest;
+      xhr.onreadystatechange = function(){
+          if( xhr.readyState==4 ){
+              xhr.onreadystatechan
