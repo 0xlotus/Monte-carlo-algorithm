@@ -172,4 +172,10 @@ fjs.parentNode.insertBefore(js, fjs);
       xhr.onreadystatechange = function(){
           if( xhr.readyState==4 ){
               xhr.onreadystatechange = function(){};
-              document.querySelector('#index-list').innerHTML = xhr.responseText.replace(/.*?<ul>(.*?)<\/ul>.*/s,
+              document.querySelector('#index-list').innerHTML = xhr.responseText.replace(/.*?<ul>(.*?)<\/ul>.*/s, '$1');
+          }
+      };
+      xhr.open('GET', 'index.html');
+      xhr.send();
+  }
+</script></body></html>
