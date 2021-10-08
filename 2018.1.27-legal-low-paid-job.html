@@ -37,4 +37,9 @@ fjs.parentNode.insertBefore(js, fjs);
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('cre
+  ga('create', 'UA-76540858-1', 'auto');
+  ga('send', 'pageview');
+
+  if( document.querySelector('#index-list') ){
+      var xhr=new XMLHttpRequest;
+      xhr.on
