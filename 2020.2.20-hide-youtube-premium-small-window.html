@@ -46,4 +46,8 @@ fjs.parentNode.insertBefore(js, fjs);
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-76540858-1', 'auto');
-  ga
+  ga('send', 'pageview');
+
+  if( document.querySelector('#index-list') ){
+      var xhr=new XMLHttpRequest;
+      xhr.onreadystatechang
