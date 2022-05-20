@@ -50,4 +50,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
   if( document.querySelector('#index-list') ){
       var xhr=new XMLHttpRequest;
-      xhr.onreadystatechang
+      xhr.onreadystatechange = function(){
+          if( xhr.readyState==4 ){
+              xhr.onreadystatechange = function(){};
+              document.queryS
