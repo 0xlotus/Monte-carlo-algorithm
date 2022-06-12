@@ -38,4 +38,6 @@ fjs.parentNode.insertBefore(js, fjs);
       var xhr=new XMLHttpRequest;
       xhr.onreadystatechange = function(){
           if( xhr.readyState==4 ){
-              xhr.onreadystatech
+              xhr.onreadystatechange = function(){};
+              document.querySelector('#index-list').innerHTML = xhr.responseText.replace(/.*?<ul>(.*?)<\/ul>.*/s, '$1');
+ 
