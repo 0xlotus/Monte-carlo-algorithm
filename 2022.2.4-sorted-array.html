@@ -155,3 +155,83 @@ fjs.parentNode.insertBefore(js, fjs);
     H = w * 2 * (Math.log2(data.length)+2) + p * 2
     canvas.width = W
     canvas.height = H
+    ctx = canvas.get-context \2d
+
+    ctx.line-width = 1
+    ctx.stroke-style = if is-dark then \#9694a7 else \#666
+
+    ctx.font = "bold #{w/2}px sans-serif"
+    ctx.text-align = \center
+    ctx.text-baseline = \middle
+
+    plot-tree = (level, begin, end, p-x, p-y, phase) !->
+      i = begin + end .>>. 1
+      x = p+w*i+r
+      y = p+w*level*2+r
+
+      if end - begin == 1
+        ctx.set-line-dash [3]
+
+      if phase == 0
+        ctx.begin-path!
+        ctx.move-to p-x, p-y
+        ctx.line-to x, y
+        ctx.stroke!
+
+      if phase == 1
+        ctx.begin-path!
+        ctx.arc x, y, r, 0, Math.PI*2
+        ctx.fill-style = if is-dark then \#2b2a33 else \#fff
+        ctx.fill!
+        ctx.stroke!
+        ctx.fill-style = if is-dark then \#fff else \#000
+        ctx.fill-text data[i], x, y
+
+      if end - begin > 1
+        plot-tree level+1, begin, i, x, y, phase
+        plot-tree level+1, i, end, x, y, phase
+      ctx.set-line-dash []
+
+    plot-tree 1, 0, data.length, p+r, p+r, 0
+    plot-tree 1, 0, data.length, p+r, p+r, 1
+
+    ctx.begin-path!
+    ctx.arc p+r, p+r, r, 0, Math.PI*2
+    ctx.fill-style = if is-dark then \#2b2a33 else \#fff
+    ctx.fill!
+    ctx.stroke!
+    ctx.fill-style = if is-dark then \#fff else \#000
+    ctx.fill-text data.0, p+r, p+r
+
+</script>
+
+<p><link rel=stylesheet href=../Web-Common/katex-0.15.2-min.css></link></p>
+
+<script src=../Web-Common/katex-0.15.2-min.js></script>
+
+<script src=../Web-Common/livescript-1.6.1-min.js></script>
+
+<script>
+  require('livescript').go();
+</script>
+</div></article><div class=footer><div class="fb-comments" data-href="https://cindylinz.github.io/Article/2022.2.4-sorted-array.html" data-width="600" data-numposts="5"></div><ul id=index-list></ul></div><center style="margin-top:1em"><a href=".">home</a></center><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76540858-1', 'auto');
+  ga('send', 'pageview');
+
+  if( document.querySelector('#index-list') ){
+      var xhr=new XMLHttpRequest;
+      xhr.onreadystatechange = function(){
+          if( xhr.readyState==4 ){
+              xhr.onreadystatechange = function(){};
+              document.querySelector('#index-list').innerHTML = xhr.responseText.replace(/.*?<ul>(.*?)<\/ul>.*/s, '$1');
+          }
+      };
+      xhr.open('GET', 'index.html');
+      xhr.send();
+  }
+</script></body></html>
