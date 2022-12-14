@@ -52,4 +52,7 @@ fjs.parentNode.insertBefore(js, fjs);
   ga('send', 'pageview');
 
   if( document.querySelector('#index-list') ){
-      var xhr=new 
+      var xhr=new XMLHttpRequest;
+      xhr.onreadystatechange = function(){
+          if( xhr.readyState==4 ){
+              xhr.onreadystatechange = fu
