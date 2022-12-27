@@ -1,4 +1,7 @@
 body {
   font-size: 100%;
   line-height: 1.6;
-  font-family: "Helveti
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1 {
