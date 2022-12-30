@@ -10,4 +10,12 @@ h1 {
   padding-bottom: 0.3em;
   line-height: 1.2;
   margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+h2 {
+  border-bottom: 0.0625px solid #eee;
+  font-size: 1.75em;
+  padding-bottom: 0.3em;
+  line-height: 1.225;
+  margin-top: 1em;
   margin-bottom: 0.
