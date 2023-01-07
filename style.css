@@ -32,4 +32,12 @@ img {
   max-width: 100%;
 }
 
-.au
+.author {
+  font-style: italic;
+  margin-bottom: -1.5em;
+}
+.author img {
+  vertical-align: middle;
+  border-radius: 50%;
+  float: left;
+  ma
