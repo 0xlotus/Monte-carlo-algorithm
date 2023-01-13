@@ -40,4 +40,14 @@ img {
   vertical-align: middle;
   border-radius: 50%;
   float: left;
-  ma
+  margin-right: 0.5em;
+}
+
+.content {
+  clear: both;
+}
+
+.frame {
+  max-width: 980px;
+  border: 0.0625em solid #ddd;
+  border-radius: 0.68
