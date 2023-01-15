@@ -82,4 +82,13 @@ ul#index-list {
 }
 
 pre {
-  background-c
+  background-color: #f7f7f7;
+  border-radius: 0.1875em;
+  font-size: 85%;
+  line-height: 1.45;
+  padding: 1em;
+  overflow: auto;
+}
+
+p {
+  text-align: justify;
