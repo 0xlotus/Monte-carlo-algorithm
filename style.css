@@ -127,4 +127,12 @@ p {
   }
 }
 
-@media (prefers-color-scheme: da
+@media (prefers-color-scheme: dark) {
+  body {
+    color: white;
+    background-color: #000;
+  }
+
+  .frame {
+    background-color: #2b2a33;
+    
