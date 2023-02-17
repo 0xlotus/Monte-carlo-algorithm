@@ -108,4 +108,14 @@ p {
   }
   .author div {
     float: right;
-    text
+    text-align: right;
+  }
+
+  .frame {
+    padding-left: 2.8125em;
+    padding-right: 2.8125em;
+  }
+
+  ul#index-list {
+    list-style: georgian;
+   
